@@ -26,96 +26,30 @@ public class MenuTetris extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ajustes = new javax.swing.JLabel();
-        salir = new javax.swing.JLabel();
-        comoJugar = new javax.swing.JLabel();
-        jugar = new javax.swing.JLabel();
-        puntaje = new javax.swing.JLabel();
-        tetrisP = new javax.swing.JLabel();
-        fondoMenu = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ajustes.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        ajustes.setForeground(new java.awt.Color(255, 255, 255));
-        ajustes.setText("AJUSTES");
-        ajustes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        salir.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        salir.setForeground(new java.awt.Color(255, 255, 255));
-        salir.setText("SALIR");
-        salir.setDoubleBuffered(true);
-        salir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        comoJugar.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        comoJugar.setForeground(new java.awt.Color(255, 255, 255));
-        comoJugar.setText("COMO JUGAR");
-        comoJugar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        puntaje.setFont(new java.awt.Font("Palatino Linotype", 1, 24)); // NOI18N
-        puntaje.setForeground(new java.awt.Color(255, 255, 255));
-        puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        puntaje.setText("PUNTAJE");
-        puntaje.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        puntaje.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        fondoMenu.setForeground(new java.awt.Color(255, 255, 255));
-        fondoMenu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        fondoMenu.setOpaque(true);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 683, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
-                .addComponent(puntaje, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(102, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(comoJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(fondoMenu)
-                    .addGap(80, 80, 80)
-                    .addComponent(tetrisP)
-                    .addGap(20, 20, 20)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jugar, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ajustes, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(puntaje, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(comoJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
-                .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(fondoMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(20, 20, 20)
-                            .addComponent(tetrisP, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(120, 120, 120)
-                            .addComponent(jugar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(220, 220, 220)
-                            .addComponent(ajustes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -157,12 +91,6 @@ public class MenuTetris extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ajustes;
-    private javax.swing.JLabel comoJugar;
-    private javax.swing.JLabel fondoMenu;
-    private javax.swing.JLabel jugar;
-    private javax.swing.JLabel puntaje;
-    private javax.swing.JLabel salir;
-    private javax.swing.JLabel tetrisP;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -38,6 +38,8 @@ public class Pausa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel2.setBackground(new java.awt.Color(0, 102, 255));
+
         buttonExit.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         buttonExit.setForeground(new java.awt.Color(204, 0, 0));
         buttonExit.setText("X");
