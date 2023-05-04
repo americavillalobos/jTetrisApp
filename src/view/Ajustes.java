@@ -1,10 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+/**
+ * @autor Galicia Cordova Elietzer Jared
+ * Fecha de creacion: 27 / 04 / 2023
+ * Fecha de modificacion: 04 / 05 / 2023
+ * Descripcion: Ventana de ajustes para el proyecto Tetris
  */
 package view;
 
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 public class Ajustes extends javax.swing.JFrame {
 
     /**
@@ -12,9 +18,26 @@ public class Ajustes extends javax.swing.JFrame {
      */
     public Ajustes() {
         initComponents();
+
+        ImageIcon imagen = new ImageIcon("./src/images/wallpaperGeneric.jpg");
+        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(wallpaper.getWidth(),
+                wallpaper.getHeight(), Image.SCALE_DEFAULT));
+        wallpaper.setIcon(icono);
+
+        ImageIcon imagen2 = new ImageIcon("./src/images/botonTetris.png");
+        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonAccept.getWidth(),
+                buttonAccept.getHeight(), Image.SCALE_DEFAULT));
+        buttonAccept.setIcon(icono2);
+
+        Icon icono3 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonExplorer.getWidth(),
+                buttonExplorer.getHeight(), Image.SCALE_DEFAULT));
+        buttonExplorer.setIcon(icono3);
+
         this.setVisible(true);
-        this.setSize(490, 613);
+        this.setSize(485, 578);
         System.out.println("Contructor");
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -27,7 +50,7 @@ public class Ajustes extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        buttonMin = new javax.swing.JButton();
         buttonClose = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         labelTitle = new javax.swing.JLabel();
@@ -37,28 +60,37 @@ public class Ajustes extends javax.swing.JFrame {
         sliderVel = new javax.swing.JSlider();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtPathSound = new javax.swing.JTextField();
+        txtPathMusic = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         buttonExplorer = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         buttonAccept = new javax.swing.JButton();
-        buttonControls = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(102, 153, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("-");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        buttonMin.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        buttonMin.setForeground(new java.awt.Color(255, 255, 255));
+        buttonMin.setText("-");
+        buttonMin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonMinMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonMinMouseExited(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 50, 40));
+        buttonMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonMinActionPerformed(evt);
+            }
+        });
+        jPanel2.add(buttonMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 50, 40));
 
         buttonClose.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         buttonClose.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,12 +114,14 @@ public class Ajustes extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        labelTitle.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        labelTitle.setFont(new java.awt.Font("Waree", 1, 24)); // NOI18N
+        labelTitle.setForeground(new java.awt.Color(255, 255, 255));
         labelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelTitle.setText("Ajustes");
-        jPanel1.add(labelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 237, 90));
+        jPanel1.add(labelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 237, 90));
 
-        checkMusic.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        checkMusic.setFont(new java.awt.Font("Waree", 0, 14)); // NOI18N
+        checkMusic.setForeground(new java.awt.Color(255, 255, 255));
         checkMusic.setSelected(true);
         checkMusic.setText("Musica");
         checkMusic.setContentAreaFilled(false);
@@ -101,9 +135,10 @@ public class Ajustes extends javax.swing.JFrame {
         sliderVol.setValue(100);
         jPanel1.add(sliderVol, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 250, -1));
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Waree", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Volumen");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 70, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 70, -1));
 
         sliderVel.setPaintLabels(true);
         sliderVel.setPaintTicks(true);
@@ -111,48 +146,66 @@ public class Ajustes extends javax.swing.JFrame {
         sliderVel.setValue(100);
         jPanel1.add(sliderVel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 250, -1));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Waree", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Velocidad");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 70, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 80, -1));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Waree", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cargar pista");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
-        txtPathSound.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        txtPathSound.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(txtPathSound, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 160, 30));
+        txtPathMusic.setBackground(new java.awt.Color(102, 153, 255));
+        txtPathMusic.setFont(new java.awt.Font("Waree", 1, 14)); // NOI18N
+        txtPathMusic.setForeground(new java.awt.Color(255, 255, 255));
+        txtPathMusic.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtPathMusic.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(txtPathMusic, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 160, 30));
 
-        buttonExplorer.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        buttonExplorer.setText("Explorar");
+        jLabel5.setFont(new java.awt.Font("Waree", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Explorar");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 273, -1, -1));
+
+        buttonExplorer.setFont(new java.awt.Font("Asana Math", 1, 14)); // NOI18N
         buttonExplorer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(buttonExplorer, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 80, 30));
 
-        buttonAccept.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        buttonAccept.setText("Aceptar");
-        buttonAccept.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(buttonAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, 170, 40));
-
-        buttonControls.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        buttonControls.setText("Controles");
-        buttonControls.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        buttonControls.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonControlsActionPerformed(evt);
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Waree", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("ACEPTAR");
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
             }
         });
-        jPanel1.add(buttonControls, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 170, 40));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 480, 20));
-        jPanel1.add(wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 560));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 150, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 46, 483, 567));
+        buttonAccept.setFont(new java.awt.Font("Asana Math", 1, 14)); // NOI18N
+        buttonAccept.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAcceptActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 200, 60));
+
+        wallpaper.setFont(new java.awt.Font("Waree", 0, 14)); // NOI18N
+        wallpaper.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 570));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 33, 490, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void buttonMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMinActionPerformed
+        this.hide();
+    }//GEN-LAST:event_buttonMinActionPerformed
 
     private void buttonCloseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonCloseMouseEntered
         this.buttonClose.setForeground(Color.red);
@@ -166,9 +219,23 @@ public class Ajustes extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_buttonCloseActionPerformed
 
-    private void buttonControlsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonControlsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonControlsActionPerformed
+    private void buttonMinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMinMouseEntered
+        this.buttonMin.setForeground(Color.red);
+    }//GEN-LAST:event_buttonMinMouseEntered
+
+    private void buttonMinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMinMouseExited
+        this.buttonMin.setForeground(Color.white);
+    }//GEN-LAST:event_buttonMinMouseExited
+
+    private void buttonAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAcceptActionPerformed
+        new MenuTetris().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonAcceptActionPerformed
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        new MenuTetris().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -204,20 +271,20 @@ public class Ajustes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonAccept;
     private javax.swing.JButton buttonClose;
-    private javax.swing.JButton buttonControls;
     private javax.swing.JButton buttonExplorer;
+    private javax.swing.JButton buttonMin;
     private javax.swing.JCheckBox checkMusic;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelTitle;
     private javax.swing.JSlider sliderVel;
     private javax.swing.JSlider sliderVol;
-    private javax.swing.JTextField txtPathSound;
+    private javax.swing.JTextField txtPathMusic;
     private javax.swing.JLabel wallpaper;
     // End of variables declaration//GEN-END:variables
 }
