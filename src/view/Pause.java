@@ -11,10 +11,10 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 
-public class Pausa extends javax.swing.JFrame {
+public class Pause extends javax.swing.JFrame {
 
    
-    public Pausa() {
+    public Pause() {
          setResizable(false);
          setLocationRelativeTo(null);
         initComponents();
@@ -85,7 +85,7 @@ public class Pausa extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(buttonExit, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(buttonExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(buttonMin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -142,7 +142,7 @@ public class Pausa extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Pausa().setVisible(true);
+                new Pause().setVisible(true);
             }
         });
     }

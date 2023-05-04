@@ -133,7 +133,7 @@ public class MenuTetris extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPointsActionPerformed
-        new ListaPuntaje().setVisible(true);
+        new ListPoints().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_buttonPointsActionPerformed
 
@@ -142,12 +142,12 @@ public class MenuTetris extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonExitActionPerformed
 
     private void buttonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPlayActionPerformed
-        new Juego().setVisible(true);
+        new Game().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_buttonPlayActionPerformed
 
     private void buttonAjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAjustesActionPerformed
-        new Ajustes().setVisible(true);
+        new Settings().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_buttonAjustesActionPerformed
 

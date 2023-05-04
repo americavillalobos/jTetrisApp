@@ -10,11 +10,11 @@ package view;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-public class ListaPuntaje extends javax.swing.JFrame {
+public class ListPoints extends javax.swing.JFrame {
 
     private ImageIcon WalpaperFondoLisPunt, imgAuxIMG;
     
-    public ListaPuntaje() {
+    public ListPoints() {
         initComponents();
         
         this.setLocationRelativeTo(null);
@@ -30,22 +30,22 @@ public class ListaPuntaje extends javax.swing.JFrame {
         // Set image to buttons
         ImageIcon buttonImage= new ImageIcon("src/images/botonTetris.png");
         this.imgAuxIMG = new ImageIcon(
-                buttonImage.getImage().getScaledInstance(btnMenu.getWidth(),
-                        btnMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
+                buttonImage.getImage().getScaledInstance(buttonMenu.getWidth(),
+                        buttonMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
 
-        btnMenu.setIcon(imgAuxIMG);
+        buttonMenu.setIcon(imgAuxIMG);
         
         this.imgAuxIMG = new ImageIcon(
-                buttonImage.getImage().getScaledInstance(btnMenu.getWidth(),
-                        btnMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
+                buttonImage.getImage().getScaledInstance(buttonMenu.getWidth(),
+                        buttonMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
 
-        btnCerrar.setIcon(imgAuxIMG);
+        buttonCerrar.setIcon(imgAuxIMG);
         
         this.imgAuxIMG = new ImageIcon(
-                buttonImage.getImage().getScaledInstance(btnMenu.getWidth(),
-                        btnMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
+                buttonImage.getImage().getScaledInstance(buttonMenu.getWidth(),
+                        buttonMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
 
-        btnReiniciar.setIcon(imgAuxIMG);
+        buttonReiniciar.setIcon(imgAuxIMG);
     }
 
     @SuppressWarnings("unchecked")
@@ -54,12 +54,9 @@ public class ListaPuntaje extends javax.swing.JFrame {
 
         PanelTitulo = new javax.swing.JPanel();
         LabelTitulo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        btnMenu = new javax.swing.JButton();
-        btnCerrar = new javax.swing.JButton();
-        btnReiniciar = new javax.swing.JButton();
+        buttonMenu = new javax.swing.JButton();
+        buttonCerrar = new javax.swing.JButton();
+        buttonReiniciar = new javax.swing.JButton();
         PanelLista = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
@@ -81,50 +78,41 @@ public class ListaPuntaje extends javax.swing.JFrame {
 
         getContentPane().add(PanelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 330, 50));
 
-        jLabel1.setFont(new java.awt.Font("Waree", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Reiniciar");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 354, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Waree", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Cerrar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 355, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Waree", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Menú");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 355, -1, -1));
-
-        btnMenu.setBackground(new java.awt.Color(35, 100, 189));
-        btnMenu.setFont(new java.awt.Font("Waree", 0, 15)); // NOI18N
-        btnMenu.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+        buttonMenu.setBackground(new java.awt.Color(35, 100, 189));
+        buttonMenu.setFont(new java.awt.Font("Waree", 0, 15)); // NOI18N
+        buttonMenu.setForeground(new java.awt.Color(255, 255, 255));
+        buttonMenu.setText("Menú");
+        buttonMenu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
+                buttonMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 100, 30));
+        getContentPane().add(buttonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 100, 30));
 
-        btnCerrar.setBackground(new java.awt.Color(35, 100, 189));
-        btnCerrar.setFont(new java.awt.Font("Waree", 0, 15)); // NOI18N
-        btnCerrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCerrar.addActionListener(new java.awt.event.ActionListener() {
+        buttonCerrar.setBackground(new java.awt.Color(35, 100, 189));
+        buttonCerrar.setFont(new java.awt.Font("Waree", 0, 15)); // NOI18N
+        buttonCerrar.setForeground(new java.awt.Color(255, 255, 255));
+        buttonCerrar.setText("Cerrar");
+        buttonCerrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarActionPerformed(evt);
+                buttonCerrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 100, 30));
+        getContentPane().add(buttonCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 100, 30));
 
-        btnReiniciar.setBackground(new java.awt.Color(35, 100, 189));
-        btnReiniciar.setFont(new java.awt.Font("Waree", 0, 15)); // NOI18N
-        btnReiniciar.setForeground(new java.awt.Color(255, 255, 255));
-        btnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+        buttonReiniciar.setBackground(new java.awt.Color(35, 100, 189));
+        buttonReiniciar.setFont(new java.awt.Font("Waree", 0, 15)); // NOI18N
+        buttonReiniciar.setForeground(new java.awt.Color(255, 255, 255));
+        buttonReiniciar.setText("Reiniciar");
+        buttonReiniciar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonReiniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReiniciarActionPerformed(evt);
+                buttonReiniciarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 100, 30));
+        getContentPane().add(buttonReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 100, 30));
 
         PanelLista.setBackground(new java.awt.Color(35, 100, 189));
         PanelLista.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -146,24 +134,24 @@ public class ListaPuntaje extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
+    private void buttonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCerrarActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_btnCerrarActionPerformed
+    }//GEN-LAST:event_buttonCerrarActionPerformed
 
-    private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
-        new Juego().setVisible(true);
+    private void buttonReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReiniciarActionPerformed
+        new Game().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnReiniciarActionPerformed
+    }//GEN-LAST:event_buttonReiniciarActionPerformed
 
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+    private void buttonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonMenuActionPerformed
         new MenuTetris().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnMenuActionPerformed
+    }//GEN-LAST:event_buttonMenuActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListaPuntaje().setVisible(true);
+                new ListPoints().setVisible(true);
             }
         });
     }
@@ -172,12 +160,9 @@ public class ListaPuntaje extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTitulo;
     private javax.swing.JPanel PanelLista;
     private javax.swing.JPanel PanelTitulo;
-    private javax.swing.JButton btnCerrar;
-    private javax.swing.JButton btnMenu;
-    private javax.swing.JButton btnReiniciar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton buttonCerrar;
+    private javax.swing.JButton buttonMenu;
+    private javax.swing.JButton buttonReiniciar;
     private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel walpaper;

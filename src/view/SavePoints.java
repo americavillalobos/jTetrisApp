@@ -19,12 +19,12 @@ import javax.swing.ImageIcon;
  *
  * @author labtecweb07
  */
-public class GuardarPuntaje extends javax.swing.JFrame {
+public class SavePoints extends javax.swing.JFrame {
 
     /**
      * Creates new form GuardarPuntaje
      */
-    public GuardarPuntaje() {
+    public SavePoints() {
         initComponents();
         // Set properties to window
         this.setLocationRelativeTo(null);
@@ -156,7 +156,7 @@ public class GuardarPuntaje extends javax.swing.JFrame {
 
     private void buttonOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOkActionPerformed
        
-        new ListaPuntaje().setVisible(true);
+        new ListPoints().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_buttonOkActionPerformed
 
@@ -197,7 +197,7 @@ public class GuardarPuntaje extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GuardarPuntaje().setVisible(true);
+                new SavePoints().setVisible(true);
             }
         });
     }
