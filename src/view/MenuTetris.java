@@ -24,29 +24,36 @@ public class MenuTetris extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
         ImageIcon imagen = new ImageIcon("./src/images/menu.jpg");
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(wallpaper.getWidth(),
+        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(
+                wallpaper.getWidth(),
                 wallpaper.getHeight(), Image.SCALE_DEFAULT));
         wallpaper.setIcon(icono);
 
         ImageIcon imagen2 = new ImageIcon("./src/images/botonTetris.png");
-        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonAjustes.getWidth(),
+        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonAjustes.getWidth(),
                 buttonAjustes.getHeight(), Image.SCALE_DEFAULT));
         buttonAjustes.setIcon(icono2);
 
-        Icon icono3 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonExit.getWidth(),
+        Icon icono3 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonExit.getWidth(),
                 buttonExit.getHeight(), Image.SCALE_DEFAULT));
         buttonExit.setIcon(icono3);
 
-        Icon icono4 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonPlay.getWidth(),
+        Icon icono4 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonPlay.getWidth(),
                 buttonPlay.getHeight(), Image.SCALE_DEFAULT));
         buttonPlay.setIcon(icono4);
 
-        Icon icono5 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonPoints.getWidth(),
+        Icon icono5 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonPoints.getWidth(),
                 buttonPoints.getHeight(), Image.SCALE_DEFAULT));
+        
         buttonPoints.setIcon(icono5);
 
         ImageIcon imagen3 = new ImageIcon("./src/images/tetrisImage.png");
-        Icon icono6 = new ImageIcon(imagen3.getImage().getScaledInstance(labelTitle.getWidth(),
+        Icon icono6 = new ImageIcon(imagen3.getImage().getScaledInstance(
+                labelTitle.getWidth(),
                 labelTitle.getHeight(), Image.SCALE_DEFAULT));
         buttonPoints.setIcon(icono5);
         

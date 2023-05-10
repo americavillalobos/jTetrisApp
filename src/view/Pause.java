@@ -20,8 +20,10 @@ public class Pause extends javax.swing.JFrame {
         initComponents();
         
         
-        ImageIcon imagen = new ImageIcon("./src/images/wallpaperGeneric.jpg");
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(wallpaper.getWidth(),
+        ImageIcon imagen = new ImageIcon(
+                "./src/images/wallpaperGeneric.jpg");
+        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(
+                wallpaper.getWidth(),
                 wallpaper.getHeight(), Image.SCALE_DEFAULT));
         wallpaper.setIcon(icono);
     }

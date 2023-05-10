@@ -1,6 +1,4 @@
 /* Autores: ELIETZER JARED GALICIA CORDOVA
- *          AMERICA YARIDSAIDA VILLALOBOS RODRIGUEZ
- *          MAXIMILIANO PACHECO PEREZ
  * Fecha de Creación: 27/04/2023
  * Fecha de Actualización: 04/05/2023
  * Descripción: Ventana Principal del Juego Tetris
@@ -21,29 +19,40 @@ public class ListPoints extends javax.swing.JFrame {
         this.setSize(400, 388);
         
         // Set wallpaper
-        this.WalpaperFondoLisPunt = new ImageIcon("src/images/wallpaperGeneric.jpg");
+        this.WalpaperFondoLisPunt = new ImageIcon(
+                "src/images/wallpaperGeneric.jpg");
         this.imgAuxIMG = new ImageIcon(
-                WalpaperFondoLisPunt.getImage().getScaledInstance(walpaper.getWidth(),
-                        walpaper.getWidth(), Image.SCALE_AREA_AVERAGING));
+                WalpaperFondoLisPunt.getImage().getScaledInstance(
+                        walpaper.getWidth(),
+                        walpaper.getWidth(), 
+                        Image.SCALE_AREA_AVERAGING));
+        
         walpaper.setIcon(imgAuxIMG);
         
         // Set image to buttons
-        ImageIcon buttonImage= new ImageIcon("src/images/botonTetris.png");
+        ImageIcon buttonImage= new ImageIcon(
+                "src/images/botonTetris.png");
         this.imgAuxIMG = new ImageIcon(
-                buttonImage.getImage().getScaledInstance(buttonMenu.getWidth(),
-                        buttonMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
+                buttonImage.getImage().getScaledInstance(
+                        buttonMenu.getWidth(),
+                        buttonMenu.getWidth(),
+                        Image.SCALE_AREA_AVERAGING));
 
         buttonMenu.setIcon(imgAuxIMG);
         
         this.imgAuxIMG = new ImageIcon(
-                buttonImage.getImage().getScaledInstance(buttonMenu.getWidth(),
-                        buttonMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
+                buttonImage.getImage().getScaledInstance(
+                        buttonMenu.getWidth(),
+                        buttonMenu.getWidth(),
+                        Image.SCALE_AREA_AVERAGING));
 
         buttonCerrar.setIcon(imgAuxIMG);
         
         this.imgAuxIMG = new ImageIcon(
-                buttonImage.getImage().getScaledInstance(buttonMenu.getWidth(),
-                        buttonMenu.getWidth(), Image.SCALE_AREA_AVERAGING));
+                buttonImage.getImage().getScaledInstance(
+                        buttonMenu.getWidth(),
+                        buttonMenu.getWidth(), 
+                        Image.SCALE_AREA_AVERAGING));
 
         buttonReiniciar.setIcon(imgAuxIMG);
     }

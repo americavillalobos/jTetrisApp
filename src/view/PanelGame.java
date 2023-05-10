@@ -1,5 +1,5 @@
 /*****************************************************
-*Autor:America Yaridsaida Villalobos Rodríguez       *
+*Autor:America ELIETZER JARED GALICIA CORDOVA        *
 * Fecha de creación: 01/05/2023                      *
 * Fecha de actualización: 04/05/2023                 *
 * Descripción:Esta es la ventana menú que llevara al *
@@ -18,19 +18,14 @@ public class PanelGame extends JPanel {
     private int heigth;
 
     public PanelGame(int width, int heigth) {
-//		this.initComponents();
 
         this.width = width;
         this.heigth = heigth;
 
         this.setSize(width, heigth);
         this.setBackground(new Color(25, 25, 25));
-//		this.setBorder(BasicBorders.getButtonBorder());
     }
 
-    // Add code for components
-    private void initComponents() {
-    }
 
     // Draw grid and set color
     @Override

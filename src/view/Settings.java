@@ -19,17 +19,21 @@ public class Settings extends javax.swing.JFrame {
     public Settings() {
         initComponents();
 
-        ImageIcon imagen = new ImageIcon("./src/images/wallpaperGeneric.jpg");
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(wallpaper.getWidth(),
+        ImageIcon imagen = new ImageIcon(
+                "./src/images/wallpaperGeneric.jpg");
+        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(
+                wallpaper.getWidth(),
                 wallpaper.getHeight(), Image.SCALE_DEFAULT));
         wallpaper.setIcon(icono);
 
         ImageIcon imagen2 = new ImageIcon("./src/images/botonTetris.png");
-        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonAccept.getWidth(),
+        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonAccept.getWidth(),
                 buttonAccept.getHeight(), Image.SCALE_DEFAULT));
         buttonAccept.setIcon(icono2);
 
-        Icon icono3 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonExplorer.getWidth(),
+        Icon icono3 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonExplorer.getWidth(),
                 buttonExplorer.getHeight(), Image.SCALE_DEFAULT));
         buttonExplorer.setIcon(icono3);
 

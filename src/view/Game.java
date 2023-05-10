@@ -1,6 +1,4 @@
-/* Autores: ELIETZER JARED GALICIA CORDOVA
- *          AMERICA YARIDSAIDA VILLALOBOS RODRIGUEZ
- *          MAXIMILIANO PACHECO PEREZ
+/* Autores: MAXIMILIANO PACHECO PEREZ
  * Fecha de Creación: 27/04/2023
  * Fecha de Actualización: 04/05/2023
  * Descripción: Ventana Principal del Juego Tetris
@@ -26,7 +24,9 @@ public class Game extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.iWalpaper = new ImageIcon("src/images/WalpaperJuego.jpg");
         this.iAuxIMG = new ImageIcon(
-                iWalpaper.getImage().getScaledInstance(walpaper.getWidth(), walpaper.getWidth(), Image.SCALE_AREA_AVERAGING)
+                iWalpaper.getImage().getScaledInstance(
+                        walpaper.getWidth(), walpaper.getWidth(), 
+                        Image.SCALE_AREA_AVERAGING)
         );
 
         walpaper.setIcon(iAuxIMG);

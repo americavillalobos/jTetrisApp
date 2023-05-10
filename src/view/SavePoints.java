@@ -33,13 +33,16 @@ public class SavePoints extends javax.swing.JFrame {
         this.setTitle("Registrar puntaje");
 
         // Set images to wallpaper and buttons
-        ImageIcon imagen = new ImageIcon("./src/images/wallpaperGeneric.jpg");
-        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(wallpaper.getWidth(),
+        ImageIcon imagen = new ImageIcon(
+                "./src/images/wallpaperGeneric.jpg");
+        Icon icono = new ImageIcon(imagen.getImage().getScaledInstance(
+                wallpaper.getWidth(),
                 wallpaper.getHeight(), Image.SCALE_DEFAULT));
         wallpaper.setIcon(icono);
 
         ImageIcon imagen2 = new ImageIcon("./src/images/botonTetris.png");
-        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(buttonOk.getWidth(),
+        Icon icono2 = new ImageIcon(imagen2.getImage().getScaledInstance(
+                buttonOk.getWidth(),
                 buttonOk.getHeight(), Image.SCALE_DEFAULT));
         buttonOk.setIcon(icono2);
     }
