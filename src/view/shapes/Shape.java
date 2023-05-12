@@ -23,6 +23,7 @@ public abstract class Shape {
     private int codeShape;
     private int x;
     private int y;
+    private PanelGame game;
     
     private boolean status;
     
@@ -35,11 +36,12 @@ public abstract class Shape {
     private Color colorFill;
 
     public Shape(PanelGame game, int x, int y, Color colorBorder,              
-            Color colorFill) {
+        Color colorFill) {
         this.x = x;
         this.y = y;
         this.colorBorder = colorBorder;
         this.colorFill = colorFill;
+        this.game = game;
         
         this.setStatus(true);
     }
